@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.1:26]","start":1663515839194,"end":1663515841380,"title":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.1:26] 16:43:59.194-16:44:01.380 user should be able to get user list"},{"id":2,"group":1,"content":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.2:27]","start":1663515841381,"end":1663515842052,"title":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.2:27] 16:44:01.381-16:44:02.052 user should be able to get user list"},{"id":3,"group":1,"content":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.3:28]","start":1663515842053,"end":1663515842630,"title":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.3:28] 16:44:02.053-16:44:02.630 user should be able to get user list","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.4:29]","start":1663515842631,"end":1663515843197,"title":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.4:29] 16:44:02.631-16:44:03.197 user should be able to get user list"},{"id":5,"group":1,"content":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.5:30]","start":1663515843203,"end":1663515843746,"title":"src\/test\/java\/com\/regresIn\/features\/regresIn\/Post_CreateUser[2.5:30] 16:44:03.203-16:44:03.746 user should be able to get user list"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
